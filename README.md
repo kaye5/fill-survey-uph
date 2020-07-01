@@ -5,6 +5,7 @@ Instant fill UPH end of term survey using jquery
 1. Open survery provided by UPH and input the required field for NIM.
 2. Open Google Chrome dev tools using `ctrl + shift + i` or using `F12`.
 3. Then copy this into console panel.then change the value into 'Skala Penilaian (1-6)' and text into something else you can write good stuff if your like ur lecturer.
+4. Repeat on each page.
 ```javascript
 var s = document.createElement('script'); s.src = 'https://codepen.io/kaye5/pen/MWKOBeG.js'; document.head.appendChild(s);
 setTimeout(()=>{
