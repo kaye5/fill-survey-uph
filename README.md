@@ -7,14 +7,31 @@ Instant fill UPH end of term survey using jquery
 3. Then copy this into console panel.then change the value into 'Skala Penilaian (1-6)' and text into something else you can write good stuff if your like ur lecturer.
 4. Repeat on each page.
 ```javascript
-var s = document.createElement('script'); s.src = 'https://codepen.io/kaye5/pen/MWKOBeG.js'; document.head.appendChild(s);
+// copy code from fill-form.js
 setTimeout(()=>{
 	fillAll(value,'text');
 },500);
 ```
 ## Example
 ```javascript
-var s = document.createElement('script'); s.src = 'https://codepen.io/kaye5/pen/MWKOBeG.js'; document.head.appendChild(s);
+function checkAll(value){
+	$('input').each(function(){
+		if($(this).attr('value') == value){			
+			$(this).click();			
+		}			
+	})
+	$('body, html').animate({scrollTop: 2000});
+}
+
+function writeText(text) {
+	$('textarea').attr('value',text);
+}
+
+function fillAll(point,text){
+	checkAll(point);
+	writeText(text);
+	$('button#movenextbtn').click();
+}
 setTimeout(()=>{
 	fillAll(6,'Aku suka dosen ini karena baik');
 },500);
